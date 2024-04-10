@@ -1,0 +1,29 @@
+<div class="d-flex flex-row justify-content-center loginPage">
+  <!-- tab of login credentials -->
+
+  <div class="loginBackground col-4">
+    <div class="loginTab m-3 p-3">
+      <span> login Doesn't have an account yet? </span>
+      <span class="signUp">Sign Up</span>
+      <div class="my-3" *ngFor="let data of loginDetails">
+        <app-common-input [inputDetails]="data"></app-common-input>
+      </div>
+
+      <app-common-button [buttonDetails]="loginButton"></app-common-button>
+      <div>
+        <hr />
+        <span> or Login With</span>
+        <hr />
+
+        <app-common-button
+          [buttonDetails]="googleLoginButton"
+        ></app-common-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- tab of project related images -->
+  <div class="col-4 p-2 loginDetail">
+    <img src="../../../../../assets/images/loginpage.png" />
+  </div>
+</div>
